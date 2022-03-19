@@ -28,7 +28,7 @@ def main():
         except DivisionByZero:
             print("Error")
             exit
-    print(a1, op, a2, '=', res)
+    print(res)
 
 
 def sub():
@@ -59,11 +59,11 @@ def sub():
     elif op == '*':
         res = a1*a2
     elif op == '/':
-        try:
+        if a2 == 0:
+            print("divisoin on zero")
+            return
+        else:
             res = a1/a2
-        except:
-            print("Error")
-            exit
     print(a1, op, a2, '=', res)
 
 
