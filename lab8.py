@@ -1,7 +1,7 @@
 def main():
     mas = [10, 2, 3, 1, 22]
     ask = ''
-    print('*добавление элемента в конец списка(last)\nдобавление элемента на определенную позицию(pos)\nудаление элемента по индексу и по ключу(remove)\nразмер списка(len)\nсортировка по убыванию и возрастанию(sort)\nвывод на экран элементов списка(print)\nвыход(exit)*\nВведите операцию: ')
+    print('добавление элемента в конец списка(last)\nдобавление элемента на определенную позицию(pos)\nудаление элемента по индексу и по ключу(remove)\nразмер списка(len)\nсортировка по убыванию и возрастанию(sort)\nвывод на экран элементов списка(print)\nвыход(exit)\nВведите операцию: ')
     while ask != 'exit':
         ask = input()
         if ask == 'last':
@@ -11,7 +11,7 @@ def main():
         if ask == 'remove':
             mas = rem(mas)
         if ask == 'len':
-            lenght()
+            lenght(mas)
         if ask == 'sort':
             mas.sort()
         if ask == 'print':
@@ -19,7 +19,7 @@ def main():
 
 
 def last(mas):
-    print(mas[len(mas)-1])
+    mas.append(int(input()))
 
 
 def pos(mas):
@@ -28,7 +28,7 @@ def pos(mas):
 
 
 def rem(mas):
-    del mas[int(input('Введите индекс'))]
+    del mas[int(input('Введите индекс: '))]
     return mas
 
 
